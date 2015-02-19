@@ -5,7 +5,7 @@ import xerial.sbt.Sonatype._
 import ReleaseStateTransformations._
 import com.typesafe.sbt.pgp.PgpKeys
 
-object ScodecPEFileBuild extends Build {
+object Build extends Build {
 
   private def gitHash: String = scala.util.Try(
     sys.process.Process("git rev-parse HEAD").lines_!.head
@@ -18,6 +18,7 @@ object ScodecPEFileBuild extends Build {
     scalaVersion := "2.11.5",
     crossScalaVersions := Seq("2.10.4", scalaVersion.value),
     resolvers += Opts.resolver.sonatypeReleases,
+    resolvers += "Scalaz Bintray Repo" at "http://dl.bintray.com/scalaz/releases",
     scalacOptions ++= (
       "-deprecation" ::
       "-unchecked" ::
