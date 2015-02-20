@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/filippovitale/pefile.png?label=ready&title=Ready)](https://waffle.io/filippovitale/pefile)
 PE File Analyser
 ================
 
