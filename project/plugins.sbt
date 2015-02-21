@@ -1,3 +1,8 @@
-addSbtPlugin("com.typesafe.sbt" % "sbt-pgp" % "0.8.1")
+resolvers += Classpaths.typesafeReleases
+resolvers += Resolver.url(
+  "bintray-sbt-plugin-releases",
+  url("http://dl.bintray.com/content/sbt/sbt-plugin-releases"))(
+    Resolver.ivyStylePatterns)
+
 addSbtPlugin("com.github.gseitz" % "sbt-release" % "0.8.5")
-addSbtPlugin("org.xerial.sbt" % "sbt-sonatype" % "0.2.1")
+addSbtPlugin("me.lessis" % "bintray-sbt" % "0.1.2")

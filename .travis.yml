@@ -1,8 +1,15 @@
 language: scala
 sudo: false
 scala:
-   - 2.10.4
-   - 2.11.5
+- 2.10.4
+- 2.11.5
 jdk:
-  - oraclejdk7
-  - oraclejdk8
+- oraclejdk7
+- oraclejdk8
+before_script: ./.credentials.sh
+after_success:
+- test "${TRAVIS_PULL_REQUEST}" = 'false' && test "${TRAVIS_JDK_VERSION}" = 'oraclejdk7' && sbt publish
+env:
+  global:
+  - secure: RqYmGA4qs8mhIC2gvTQR5u7kzGjsvXnY2epUDqO7Bjv0ytrjia45fWrFTwJJNTGNSSBgGU+Z4wt/BOl3Y0y/3mKT/omu5fUIttMKhjo2OyjuqZ+8U5hdO6DU4/YIdDxQvEcNmdOdEJwnz5LN8JAPpAVaa/LWor7No5OXP8TBKmg=
+  - secure: EC4KI4AGQLqRAtRz3TvZhSLVR8xVtzqRq/CHg5AH3L+DS1VRCwBwFqmW+TQV/UWW6h+GL0Unf660wTWPKYljdIq6h/n7BzXAeplBdp3dRFFQizfNnVVLslqd4BGE5CukspOWipB+agu/8ukSCClpEWzNCMv1LpMo1gqWEAFymfw=
