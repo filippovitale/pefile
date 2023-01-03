@@ -13,3 +13,6 @@ PE File Analyser
 * http://en.wikipedia.org/wiki/Portable_Executable
 * http://en.wikibooks.org/wiki/X86_Disassembly/Windows_Executable_Files
 * http://wiki.osdev.org/PE
+
+##### Project Inspiration
+* https://github.com/guillaumebreton/mqtt-codec
